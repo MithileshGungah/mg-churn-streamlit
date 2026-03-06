@@ -873,6 +873,8 @@ Upload a CSV containing **exactly these columns** (case-sensitive):
 - gender, SeniorCitizen, Partner, Dependents, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup,
   DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod,
   tenure, MonthlyCharges, TotalCharges
+
+- Once a file is uploaded, predictions will be generated below and available for download.
 """
 )
 
