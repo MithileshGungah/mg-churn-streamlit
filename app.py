@@ -108,6 +108,27 @@ st.markdown(
         color: var(--text) !important;
     }
 
+    .stSelectbox div[data-baseweb="select"] span,
+    .stSelectbox div[data-baseweb="select"] input,
+    .stNumberInput input,
+    .stTextInput input,
+    .stNumberInput input::placeholder,
+    .stTextInput input::placeholder,
+    textarea::placeholder {
+        color: var(--text) !important;
+        opacity: 1 !important;
+    }
+
+    .stSelectbox div[data-baseweb="select"] svg {
+        fill: var(--text) !important;
+    }
+
+    .stSelectbox div[data-baseweb="popover"] *,
+    div[data-baseweb="menu"] *,
+    ul[role="listbox"] * {
+        color: #1f2333 !important;
+    }
+
     label, .stMarkdown, .stText, p, span, div {
         color: var(--text);
     }
@@ -126,7 +147,7 @@ st.markdown(
     }
 
     div[data-testid="stAlert"] {
-    margin-top: 14px;
+        margin-top: 14px;
     }
 
     div.stButton > button:hover,
@@ -318,6 +339,188 @@ st.markdown(
         overflow: hidden;
     }
 
+    @media (prefers-color-scheme: light) {
+        :root{
+            --bg-0:#f7f8fc;
+            --bg-1:#eef2f9;
+            --panel:#ffffff;
+            --panel-2:#f7f9ff;
+            --border:rgba(124,77,255,0.20);
+            --border-soft:rgba(31,35,51,0.10);
+            --text:#1f2333;
+            --muted:rgba(31,35,51,0.68);
+            --accent:#8B5CF6;
+            --accent-2:#7C3AED;
+            --green:#16a34a;
+            --red:#dc2626;
+            --amber:#d97706;
+            --cyan:#0891b2;
+        }
+
+        .stApp {
+            background:
+                radial-gradient(900px 500px at 15% 0%, rgba(192,132,252,0.10), transparent 55%),
+                radial-gradient(800px 600px at 85% 10%, rgba(46,204,113,0.07), transparent 60%),
+                linear-gradient(180deg, var(--bg-0), var(--bg-1));
+            color: var(--text);
+        }
+
+        section[data-testid="stSidebar"] {
+            background: linear-gradient(180deg, #fbfbff 0%, #f3f5fb 100%);
+            border-right: 1px solid rgba(124,77,255,0.14);
+        }
+
+        .card-divider {
+            background: linear-gradient(90deg, transparent, rgba(124,77,255,0.22), transparent);
+        }
+
+        .stSelectbox div[data-baseweb="select"],
+        .stNumberInput div[data-baseweb="input"],
+        .stTextInput div[data-baseweb="input"] {
+            background: #f7f9fd !important;
+            border: 1px solid #d7dfec !important;
+            box-shadow: 0 6px 18px rgba(31,35,51,0.06) !important;
+            border-radius: 14px !important;
+        }
+
+        .stSelectbox div[data-baseweb="select"]:hover,
+        .stNumberInput div[data-baseweb="input"]:hover,
+        .stTextInput div[data-baseweb="input"]:hover {
+            border: 1px solid rgba(124,77,255,0.38) !important;
+        }
+
+        .stSelectbox div[data-baseweb="select"] > div,
+        .stNumberInput input,
+        .stTextInput input,
+        textarea,
+        .stSelectbox div[data-baseweb="select"] span,
+        .stSelectbox div[data-baseweb="select"] input,
+        .stNumberInput input::placeholder,
+        .stTextInput input::placeholder,
+        textarea::placeholder {
+            color: #1f2333 !important;
+            opacity: 1 !important;
+        }
+
+        .stSelectbox div[data-baseweb="select"] svg {
+            fill: #4b5563 !important;
+        }
+
+        .stSelectbox div[data-baseweb="popover"] *,
+        div[data-baseweb="menu"] *,
+        ul[role="listbox"] * {
+            color: #1f2333 !important;
+        }
+
+        .stSelectbox div[data-baseweb="popover"],
+        div[data-baseweb="menu"],
+        ul[role="listbox"] {
+            background: #ffffff !important;
+        }
+
+        label, .stMarkdown, .stText, p, span, div {
+            color: var(--text);
+        }
+
+        div.stButton > button,
+        div[data-testid="stDownloadButton"] > button {
+            color: #ffffff;
+            background: linear-gradient(90deg, #8B5CF6, #7C3AED);
+            border: 1px solid rgba(124,77,255,0.40);
+            box-shadow: 0 10px 24px rgba(124,77,255,0.18);
+        }
+
+        div.stButton > button:hover,
+        div[data-testid="stDownloadButton"] > button:hover {
+            background: linear-gradient(90deg, #7C3AED, #6D28D9);
+            border: 1px solid rgba(124,77,255,0.52);
+        }
+
+        [data-testid="stMetric"] {
+            background: rgba(255,255,255,0.82);
+            border: 1px solid rgba(31,35,51,0.08);
+            box-shadow: 0 10px 22px rgba(31,35,51,0.08);
+        }
+
+        .result-card{
+            background: linear-gradient(180deg, rgba(255,255,255,0.90), rgba(248,250,255,0.88));
+            border: 1px solid rgba(31,35,51,0.08);
+            box-shadow: 0 16px 36px rgba(31,35,51,0.10);
+        }
+
+        .badge{
+            border: 1px solid rgba(31,35,51,0.10);
+            background: rgba(255,255,255,0.88);
+            color: #1f2333;
+        }
+
+        .badge-low{ border-color: rgba(22,163,74,0.28); }
+        .badge-med{ border-color: rgba(217,119,6,0.30); }
+        .badge-high{ border-color: rgba(220,38,38,0.30); }
+
+        .badge-prio-1{ border-color: rgba(220,38,38,0.38); }
+        .badge-prio-2{ border-color: rgba(217,119,6,0.36); }
+        .badge-prio-3{ border-color: rgba(124,77,255,0.34); }
+        .badge-prio-none{ border-color: rgba(31,35,51,0.10); }
+
+        .badge-decision-churn{
+            border-color: rgba(220,38,38,0.28);
+            background: rgba(220,38,38,0.08);
+            box-shadow: inset 0 0 0 1px rgba(220,38,38,0.05);
+        }
+
+        .badge-decision-stay{
+            border-color: rgba(22,163,74,0.26);
+            background: rgba(22,163,74,0.08);
+            box-shadow: inset 0 0 0 1px rgba(22,163,74,0.05);
+        }
+
+        .result-right {
+            color: rgba(31,35,51,0.58);
+        }
+
+        .kpi{
+            background: rgba(255,255,255,0.82);
+            border: 1px solid rgba(31,35,51,0.08);
+            box-shadow: 0 10px 22px rgba(31,35,51,0.08);
+        }
+
+        .kpi .label{
+            color: rgba(31,35,51,0.62);
+        }
+
+        .kpi .value{
+            color: #1f2333;
+        }
+
+        .prob-wrap{
+            background: rgba(255,255,255,0.72);
+            border: 1px solid rgba(31,35,51,0.08);
+        }
+
+        .prob-title{
+            color: rgba(31,35,51,0.88);
+        }
+
+        .prob-bar{
+            background: rgba(31,35,51,0.08);
+        }
+
+        .section-h{
+            color: rgba(31,35,51,0.92);
+        }
+
+        .pill{
+            border: 1px solid rgba(124,77,255,0.18);
+            background: rgba(124,77,255,0.08);
+            color: #1f2333;
+        }
+
+        .small-muted{
+            color: rgba(31,35,51,0.66);
+        }
+    }
+
     @media (max-width: 992px) {
         .block-container {
             max-width: 100%;
@@ -421,9 +624,15 @@ st.markdown(
             font-size: 11px;
             padding: 5px 9px;
         }
+    }
 
-        .title-green {
+    .title-green {
         color: #2ecc71 !important;
+    }
+
+    @media (prefers-color-scheme: light) {
+        .title-green {
+            color: #7C3AED !important;
         }
     }
     </style>
@@ -661,15 +870,15 @@ with st.sidebar:
     st.markdown("<div class='card-title'>Billing Information</div>", unsafe_allow_html=True)
     st.markdown("<div class='card-divider'></div>", unsafe_allow_html=True)
 
-    contract = st.selectbox("Contract Type", ["Month-to-Month", "One year", "Two year"])
+    contract = st.selectbox("Contract Type", ["Month-to-month", "One year", "Two year"])
     paperless = st.selectbox("Paperless Billing", ["No", "Yes"])
     payment_method = st.selectbox(
         "Payment Method",
         [
-            "Bank Transfer (Automatic)",
-            "Credit Card (Automatic)",
-            "Electronic Check",
-            "Mailed Check",
+            "Bank transfer (automatic)",
+            "Credit card (automatic)",
+            "Electronic check",
+            "Mailed check",
         ],
     )
 
@@ -693,7 +902,7 @@ with st.sidebar:
 
     st.markdown("</div>", unsafe_allow_html=True)
 
-    run = st.button("Predict", use_container_width=True)
+    run = st.button("Predict", width="stretch")
 
 st.subheader("Prediction Result")
 
@@ -920,7 +1129,7 @@ if uploaded is not None:
             ]
 
             st.success(f"Batch predictions complete: {len(out)} rows")
-            st.dataframe(out, use_container_width=True)
+            st.dataframe(out, width="stretch")
 
             st.download_button(
                 "Download Results CSV",
